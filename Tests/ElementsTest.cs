@@ -21,7 +21,7 @@ namespace ST_Project.Tests
         [Test]
         public void TestTextBox()
         {
-            _elementsPage.TestTextBox();
+            _elementsPage.TestTextBoxInput("John Doe", "johndoe@example.com", "123 Test Street", "456 Permanent Avenue");
         }
 
         [Test]
@@ -34,6 +34,43 @@ namespace ST_Project.Tests
         public void TestRadioButton()
         {
             _elementsPage.TestRadioButton();
+        }
+
+        [Test]
+        public void TestWebTables()
+        {
+            _elementsPage.TestWebTables_AddEntry("John", "Doe", "johndoe@example.com", 30, 50000, "IT");
+        }
+
+        [Test]
+        public void TestButtons()
+        {
+            _elementsPage.TestButtons();
+        }
+
+        [Test]
+        public void TestLinks()
+        {
+            _elementsPage.TestLinks();
+        }
+
+        [Test]
+        public void TestBrokenLinksImages()
+        {
+            _elementsPage.TestBrokenLinksImages();
+        }
+
+        [Test]
+        public void TestUploadAndDownload()
+        {
+            string filePath = @"F:\Study\ST\ST_Project\Assets\testfile.txt";
+            _elementsPage.TestUploadAndDownload(filePath);
+        }
+
+        [Test]
+        public void TestDynamicProperties()
+        {
+            _elementsPage.TestDynamicProperties();
         }
 
         [TearDown]
